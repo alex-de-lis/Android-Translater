@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">TestTranslater</string>
+    <string name="BtnText">Translate</string>
+</resources>
