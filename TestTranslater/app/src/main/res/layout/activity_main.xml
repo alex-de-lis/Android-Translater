@@ -10,41 +10,56 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="asusx.testtranslater.MainActivity">
 
-    <Spinner
-        android:id="@+id/FirstList"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"></Spinner>
-
-    <EditText
-        android:layout_width="wrap_content"
+    <TableLayout
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:inputType="textMultiLine"
-        android:ems="8"
-        android:layout_below="@id/FirstList"
-        android:id="@+id/ToTranslate" />
+        android:id="@+id/TableL"
+        >
+        <TableRow>
+            <Spinner
+                android:id="@+id/FirstList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                >
+            </Spinner>
+            <Spinner
+                android:id="@+id/SecondList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                >
+            </Spinner>
+        </TableRow>
 
-    <Spinner
-        android:id="@+id/SecondList"
-        android:layout_alignBaseline="@id/FirstList"
-        android:layout_toEndOf="@id/ToTranslate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"></Spinner>
+        <TableRow>
+            <EditText
+                android:inputType="textMultiLine"
+                android:layout_width="@dimen/HalfOfScreen"
+                android:id="@+id/ToTranslate"
+                android:layout_weight="0.5"
+                android:maxLength="256"
+                />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/ToTranslate"
-        android:layout_alignBaseline="@id/ToTranslate"
-        android:inputType="textMultiLine"
-        android:ems="8"
-        android:id="@+id/TranslateText" />
+            <EditText
+                android:inputType="textMultiLine"
+                android:layout_width="@dimen/HalfOfScreen"
+                android:id="@+id/TranslateText"
+                android:layout_weight="0.5"
+                android:focusable="false"
+                android:longClickable="false"
+                android:cursorVisible="false"
+
+                />
+        </TableRow>
+    </TableLayout>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/btn"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/ToTranslate"
+        android:layout_below="@id/TableL"
         android:text="@string/BtnText"
         android:onClick="StartTranslate"
         />
