@@ -20,36 +20,54 @@
                 android:id="@+id/FirstList"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight="45"
+                android:width="@dimen/HalfOfScreen"
                 >
             </Spinner>
+            <TextView
+                android:layout_weight="1"
+                />
             <Spinner
                 android:id="@+id/SecondList"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight="45"
+                android:width="@dimen/HalfOfScreen"
                 >
             </Spinner>
         </TableRow>
 
         <TableRow>
             <EditText
+                android:background="@color/LightGrey"
                 android:inputType="textMultiLine"
-                android:layout_width="@dimen/HalfOfScreen"
                 android:id="@+id/ToTranslate"
-                android:layout_weight="0.5"
+                android:labelFor="@id/ToTranslate"
+                android:scrollbars="vertical"
+                android:lines="5"
+                android:height="@dimen/MyHight"
+                android:width="@dimen/HalfOfScreen"
+                android:layout_weight="45"
+                android:gravity="top"
                 android:maxLength="256"
                 />
-
+            <TextView
+                android:layout_weight="5"
+                />
             <EditText
+                android:background="@color/LightGrey"
                 android:inputType="textMultiLine"
-                android:layout_width="@dimen/HalfOfScreen"
                 android:id="@+id/TranslateText"
-                android:layout_weight="0.5"
+                android:labelFor="@id/TranslateText"
+                android:height="@dimen/MyHight"
+                android:width="@dimen/HalfOfScreen"
+                android:scrollbars="vertical"
+                android:gravity="top"
+                android:layout_weight="45"
+                android:lines="5"
                 android:focusable="false"
                 android:longClickable="false"
                 android:cursorVisible="false"
-
                 />
         </TableRow>
     </TableLayout>
